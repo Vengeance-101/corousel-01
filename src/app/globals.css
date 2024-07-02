@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.slick-slide > div {
+  margin: 0 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.arrow-button {
+  height: 70px;
+  width: 70px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+  box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.493);
+  &:hover {
+    background-color: black;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.arrow-button:hover > .arrows {
+  color: white;
 }
+/* .button-container {
+  border: 10px solid red;
+} */
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.slick-track {
+  padding-bottom: 20px !important;
 }
